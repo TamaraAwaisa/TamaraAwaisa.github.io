@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1 Position</title>
+    <style>
+        .container{
+            position: relative;
+        }
+        .red-box {
+            position: relative;
+            border: 2px solid red;
+            background-color: red;
+            height: 200px;
+            width: 200px;
+        }
+        .blue-box {
+            position: absolute;
+            border: 2px solid blue;
+            background-color: blue;
+            height: 200px;
+            width: 200px;
+            left: 20px;
+            top: 20px;
+        }
+        .yellow-box {
+            position: absolute;
+            border: 2px solid yellow;
+            background-color: yellow;
+            height: 200px;
+            width: 200px;
+            left: 40px;
+            top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="red-box"></div>
+        <div class="blue-box"></div>
+        <div class="yellow-box"></div>
+    </div>
+</body>
+</html>
