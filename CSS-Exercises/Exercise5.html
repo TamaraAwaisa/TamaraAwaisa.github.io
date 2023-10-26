@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2e4bbeb683.js" crossorigin="anonymous"></script>
+    <title>Profile Card</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        }
+
+        .profile-card {
+            max-width: 300px;
+            margin: 0 auto;
+            border: 2px solid lightskyblue;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 10px;
+        }
+
+        .city-name {
+            color: rgba(0, 0, 0, 0.436);
+            font-size: small;
+            margin-top: 0px;
+        }
+
+        .rounded-img {
+            border: 7px solid #e3e3e3;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+
+        .bottom-info {
+            padding: 10px;
+        }
+
+        .name {
+            font-size: 16px;
+
+        }
+
+        .description {
+            color: #777;
+            font-size: small;
+            margin-bottom: 30px;
+        }
+
+        .follow-button {
+            background-color: #1E90FF;
+            color: whitesmoke;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 2px solid #1E90FF;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .icons {
+            display: flex;
+            justify-content: space-around;
+            gap: 10px;
+            background-color: #2f405feb;
+            padding: 10px;
+            margin: -10px;
+            border-radius: 0px 0px 10px 10px;
+        }
+
+        .icon {
+            text-align: center;
+        }
+
+        .icon-label {
+            font-size: x-small;
+            color: whitesmoke;
+            
+        }
+
+        .icon-count {
+            display: inline-block;
+            font-size: x-small;
+            color: whitesmoke;
+        }
+
+</style>
+</head>
+<body>
+    <div class="profile-card">
+        <i class="fa-regular fa-circle-check" style="color: #005eff; font-size: 25px; display: flex; justify-content: right;"></i>
+        <h5 class="city-name" style="display: flex; justify-content: center;">Palestine Nablus</h5>
+        <img src="profile-image.jpg" alt="Profile Image" class="rounded-img">
+        <div class="bottom-info">
+            <h2 class="name">Mr. Meow</h2>
+            <p class="description">Mr. Meow lives in Palestine and loves to be famous and rich.</p>
+            <button class="follow-button" type="submit">Follow</button>
+        </div>
+        <hr>
+        <div class="icons">
+            <div class="icon">
+                <i class="fa-regular fa-images" style="color:#1E90FF;font-size:25px;"></i>
+                <span class="icon-label">Posts</span>
+                <span class="icon-count">100</span>
+            </div>
+            <div class="icon">
+                <i class="fa-regular fa-heart" style="color:#1E90FF;font-size:25px;"></i>
+                <span class="icon-label">Favorites</span>
+                <span class="icon-count">50</span>
+            </div>
+            <div class="icon">
+                <i class="fa-regular fa-message" style="color:#1E90FF;font-size:25px;"></i>
+                <span class="icon-label">Messages</span>
+                <span class="icon-count">75</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
