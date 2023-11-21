@@ -16,8 +16,12 @@
         const countCharacters = () => {
             let numOfEnteredChars = textArea.value.length;
             charCounter.textContent = numOfEnteredChars + " Character";
+            if(numOfEnteredChars > 55) {
+            charCounter.style.color="red";
+            }
         };
         textArea.addEventListener("input", countCharacters);
+        
     </script>
 </body>
 </html>
