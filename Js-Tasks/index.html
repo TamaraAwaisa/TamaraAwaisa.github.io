@@ -7,21 +7,30 @@
 </head>
 <body>
     <div style="border: 2px solid rgb(0, 183, 255); width: 500px; height: 300px; background-color: skyblue;">
-        <textarea id="textbox" name="message" rows="10" cols="40" onkeyup="CharacterCount1" placeholder="Enter Text Here" style="color: rgb(49, 44, 44); margin: 20px;"></textarea>
+        <textarea id="textbox" name="message" rows="10" cols="40" oninput="countCharacters()" placeholder="Enter Text Here" style="color: rgb(49, 44, 44); margin: 20px;"></textarea>
         <div id="charCount" style="text-align: right; color: blue; font-weight: bold;"></div>
     </div>
     <script>
-        let textArea = document.getElementById("textbox");
-        let charCounter = document.getElementById("charCount");
-        const countCharacters = () => {
+        const textArea = document.getElementById("textbox");
+        const charCounter = document.getElementById("charCount");
+
+        const updateCharacterCount = (event) => {
             let numOfEnteredChars = textArea.value.length;
-            charCounter.textContent = numOfEnteredChars + " Character";
-            if(numOfEnteredChars > 55) {
-            charCounter.style.color="red";
+            charCount.textContent = `${numOfEnteredChars} Character`;
+            updateColor(numOfEnteredChars)
+            return numOfEnteredChars;
+        };
+
+        const updateColor = (numOfChars) => {
+            if(numOfChars > 55) {
+                charCounter.style.color="red";
+            }else{
+                charCounter.style.color="blue";
             }
         };
-        textArea.addEventListener("input", countCharacters);
-        
+
+        textArea.addEventListener("input", updateCharacterCount);
+
     </script>
 </body>
 </html>
